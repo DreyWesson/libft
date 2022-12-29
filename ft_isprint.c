@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 21:29:46 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 21:28:55 by doduwole         ###   ########.fr       */
+/*   Created: 2022/12/14 14:38:42 by doduwole          #+#    #+#             */
+/*   Updated: 2022/12/14 14:49:02 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+// #include <stdio.h>
 
-int	ft_strlen(const char *str)
+int	ft_isprint( int c )
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if (c >= 32 && c <= 127)
+		return (1);
+	return (0);
 }
+
 // int	main(void)
 // {
-// 	printf("%i", ft_strlen("drey"));
+// 	printf("%i", ft_isprint(30));
 // 	return (0);
 // }

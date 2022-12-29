@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 21:29:46 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 21:28:55 by doduwole         ###   ########.fr       */
+/*   Created: 2022/12/14 13:14:45 by doduwole          #+#    #+#             */
+/*   Updated: 2022/12/23 14:38:47 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+// #include <stdio.h>
 
-int	ft_strlen(const char *str)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return ((char *)(&s[i]));
 		i++;
-	return (i);
+	}
+	return (NULL);
 }
+
 // int	main(void)
 // {
-// 	printf("%i", ft_strlen("drey"));
+// 	char	*str;
+
+// 	str = "Hello there, Venus";
+// 	printf("%p \n", ft_strchr(&str[0], 'l'));
 // 	return (0);
 // }

@@ -6,13 +6,16 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 22:18:39 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/13 09:03:15 by doduwole         ###   ########.fr       */
+/*   Updated: 2022/12/28 10:59:21 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
+#include <string.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size);
+
+size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size)
 {
 	unsigned int	i;
 	int				src_len;
@@ -42,7 +45,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 // 	char	*src;
 
 // 	src = "Hello there, Venus";
-// 	printf("%i \n", ft_strlcpy(&dest, &src[0], 9));
+// 	printf("%zu \n", ft_strlcpy(&dest, &src[0], 9));
 // 	printf("%s", &dest);
 // 	return (0);
 // }

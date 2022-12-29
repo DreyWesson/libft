@@ -6,13 +6,15 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 07:32:59 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/13 09:02:30 by doduwole         ###   ########.fr       */
+/*   Updated: 2022/12/23 14:41:16 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+// #include <string.h>
+size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size);
 
-int	ft_str_len(char *str)
+int	ft_strlen(const char *restrict str)
 {
 	int	i;
 
@@ -22,15 +24,15 @@ int	ft_str_len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	j;
 	int				k;
 
 	j = 0;
-	k = ft_str_len(src);
-	i = ft_str_len(dest);
+	k = ft_strlen(src);
+	i = ft_strlen(dest);
 	if (size == 0)
 		return (k);
 	if (size <= i)

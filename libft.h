@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 21:29:46 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 21:28:55 by doduwole         ###   ########.fr       */
+/*   Created: 2022/12/21 18:31:39 by doduwole          #+#    #+#             */
+/*   Updated: 2022/12/25 14:50:50 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# ifndef LIBFT_H
+#define LIBFT_H
+
+#include <unistd.h>
 #include <stdio.h>
-#include "libft.h"
 
-int	ft_strlen(const char *str)
-{
-	size_t	i;
+int		ft_strlen(const char *str);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-// int	main(void)
-// {
-// 	printf("%i", ft_strlen("drey"));
-// 	return (0);
-// }
+#endif

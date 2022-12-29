@@ -6,13 +6,13 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:22:23 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/13 21:55:33 by doduwole         ###   ########.fr       */
+/*   Updated: 2022/12/23 08:48:16 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	ft_validate(char *str, int *is_neg, int *is_pos, long *i)
+int	ft_validate(const char *str, int *is_neg, int *is_pos, long *i)
 {
 	while (str[*i] != '\0' && (!(str[*i] >= '0' && str[*i] <= '9')))
 	{
@@ -35,7 +35,7 @@ int	ft_validate(char *str, int *is_neg, int *is_pos, long *i)
 	return (*i);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	long	i;
 	long	nbr;
@@ -62,9 +62,9 @@ int	ft_atoi(char *str)
 	return (nbr);
 }
 
-int	main(int argc, char *argv[])
-{
-	if (argc > 1)
-		printf("%i", ft_atoi(argv[1]));
-	return (0);
-}
+// int	main(int argc, char *argv[])
+// {
+// 	if (argc > 1)
+// 		printf("%i", ft_atoi(argv[1]));
+// 	return (0);
+// }
