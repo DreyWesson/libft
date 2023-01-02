@@ -6,12 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 19:40:47 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 20:27:55 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:32:57 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include <stdlib.h>
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size);
 

@@ -6,11 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 17:05:47 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 08:49:11 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:35:57 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include <unistd.h>
 
 void	ft_bzero(void *s, size_t n)
 {

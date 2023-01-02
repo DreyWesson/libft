@@ -6,13 +6,14 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 20:01:17 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/24 20:23:49 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:40:05 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include <stdlib.h>
-// #include "libft.h"
+#include <unistd.h>
+#include <stdlib.h>
+#include "libft.h"
 
 char	*strdup(const char *s1);
 

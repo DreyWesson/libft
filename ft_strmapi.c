@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 13:14:45 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:39:37 by doduwole         ###   ########.fr       */
+/*   Created: 2022/12/29 15:10:43 by doduwole          #+#    #+#             */
+/*   Updated: 2023/01/02 12:42:00 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
+	char	*ptr;
 
 	i = 0;
+	if (s == NULL || f == NULL)
+		return (NULL);
+	ptr = malloc(ft_strlen(s));
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-			return ((char *)(&s[i]));
+		ptr[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	return (ptr);
 }
+
+// char	f(unsigned int i, char c)
+// {
+// 	printf("%c\t%i\n", c, i);
+// 	return (c);
+// }
 
 // int	main(void)
 // {
-// 	char	*str;
-
-// 	str = "Hello there, Venus";
-// 	printf("%p \n", ft_strchr(&str[0], 'l'));
+// 	ft_strmapi("Drey", f);
 // 	return (0);
 // }

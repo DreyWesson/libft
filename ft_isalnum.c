@@ -6,11 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 19:43:26 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/13 09:02:46 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:36:25 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include <unistd.h>
 
 int	ft_isalnum(int c)
 {

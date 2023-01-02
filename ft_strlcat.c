@@ -6,12 +6,14 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 07:32:59 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 14:41:16 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:40:45 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
+#include <unistd.h>
+
 size_t	ft_strlcat(char *restrict dest, const char *restrict src, size_t size);
 
 int	ft_strlen(const char *restrict str)

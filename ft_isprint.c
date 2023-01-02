@@ -6,11 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 14:38:42 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/14 14:49:02 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:36:56 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include <unistd.h>
 
 int	ft_isprint( int c )
 {

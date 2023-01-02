@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 13:14:45 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:39:37 by doduwole         ###   ########.fr       */
+/*   Created: 2023/01/02 09:29:53 by doduwole          #+#    #+#             */
+/*   Updated: 2023/01/02 12:14:40 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return ((char *)(&s[i]));
-		i++;
-	}
-	return (NULL);
+	write(fd, &c, 1);
 }
 
-// int	main(void)
+// int main(void)
 // {
-// 	char	*str;
-
-// 	str = "Hello there, Venus";
-// 	printf("%p \n", ft_strchr(&str[0], 'l'));
+// 	ft_putchar_fd('d', 1);
 // 	return (0);
 // }

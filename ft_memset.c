@@ -6,11 +6,13 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:47:49 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 14:37:00 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:38:50 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include <unistd.h>
+
 void	*ft_memset(void *s, int n, size_t len);
 
 void	*ft_memset(void *s, int n, size_t len)

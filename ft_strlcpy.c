@@ -6,12 +6,13 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 22:18:39 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/28 10:59:21 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:41:28 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
+#include <unistd.h>
 
 size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size);
 

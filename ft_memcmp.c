@@ -6,11 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:17:55 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 14:27:27 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:37:38 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include <unistd.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 

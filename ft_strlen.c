@@ -6,11 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:29:46 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 21:28:55 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:41:37 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
+#include <unistd.h>
 #include "libft.h"
 
 int	ft_strlen(const char *str)

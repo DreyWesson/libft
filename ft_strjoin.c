@@ -6,13 +6,14 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 19:54:41 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/24 20:22:59 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:40:26 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include <stdlib.h>
-// #include "libft.h"
+#include <unistd.h>
+#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2);
 

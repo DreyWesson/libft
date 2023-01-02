@@ -6,11 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 17:18:29 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/13 09:03:05 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:36:50 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include <unistd.h>
 
 int	ft_isdigit(int c)
 {

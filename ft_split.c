@@ -6,13 +6,14 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 11:27:22 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/29 06:44:51 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/02 12:39:30 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
+#include <unistd.h>
 
 char	**ft_split(char const *s, char c);
 int		ft_delimiter_counter(const char *s, char c);
@@ -82,17 +83,17 @@ char	**ft_split(char const *s, char c)
 	return (ptr);
 }
 
-int	main(void)
-{
-	char	**ptr;
-	int		i;
+// int	main(void)
+// {
+// 	char	**ptr;
+// 	int		i;
 
-	i = 0;
-	ptr = ft_split("mississippi", 'i');
-	while (ptr[i] != NULL)
-	{
-		printf("%s\n", *(ptr + i));
-		i++;
-	}
-	return (0);
-}
+// 	i = 0;
+// 	ptr = ft_split("mississippi", 'i');
+// 	while (ptr[i] != NULL)
+// 	{
+// 		printf("%s\n", *(ptr + i));
+// 		i++;
+// 	}
+// 	return (0);
+// }
