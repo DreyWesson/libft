@@ -6,7 +6,7 @@
 #    By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/29 15:58:46 by doduwole          #+#    #+#              #
-#    Updated: 2022/12/29 16:21:56 by doduwole         ###   ########.fr        #
+#    Updated: 2023/01/03 14:52:39 by doduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,15 +26,20 @@ SRC =	ft_atoi.c		\
 		ft_memcpy.c		\
 		ft_memmove.c	\
 		ft_memset.c		\
+		ft_putchar_fd.c	\
+		ft_putendl_fd.c	\
+		ft_putnbr_fd.c	\
+		ft_putstr_fd.c	\
 		ft_split.c		\
 		ft_strchr.c		\
 		ft_strcmp.c		\
 		ft_strdup.c		\
+		ft_striteri.c	\
 		ft_strjoin.c	\
 		ft_strlcat.c	\
 		ft_strlcpy.c	\
 		ft_strlen.c		\
-		strncat.c		\
+		ft_strmapi.c	\
 		ft_strnstr.c	\
 		ft_strrchr.c	\
 		ft_strtrim.c	\
@@ -59,15 +64,20 @@ OBJ = 	ft_atoi.o		\
 		ft_memcpy.o		\
 		ft_memmove.o	\
 		ft_memset.o		\
+		ft_putchar_fd.o	\
+		ft_putendl_fd.o	\
+		ft_putnbr_fd.o	\
+		ft_putstr_fd.o	\
 		ft_split.o		\
 		ft_strchr.o		\
 		ft_strcmp.o		\
 		ft_strdup.o		\
+		ft_striteri.o	\
 		ft_strjoin.o	\
 		ft_strlcat.o	\
 		ft_strlcpy.o	\
 		ft_strlen.o		\
-		strncat.o		\
+		ft_strmapi.o	\
 		ft_strnstr.o	\
 		ft_strrchr.o	\
 		ft_strtrim.o	\

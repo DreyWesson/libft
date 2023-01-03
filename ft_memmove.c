@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:13:48 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 14:35:23 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 14:14:22 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 // 	int age;
 // 	double average;
 // } Student;
+#include <unistd.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t n);
 

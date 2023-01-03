@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 09:13:59 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:37:23 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 16:18:31 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void	ft_str_converter(char *ptr, int *n, int *itr)
 	{
 		rem = *n % 10;
 		*n = *n / 10;
+		if (rem < 0)
+			rem = -rem;
 		if (rem > 9)
 			ptr[*itr] = (rem - 10) + 'a';
 		else
@@ -96,7 +98,7 @@ char	*ft_itoa(int n)
 // 	char	*ptr;
 
 // 	i = 0;
-// 	ptr = ft_itoa(-15060);
+// 	ptr = ft_itoa(-2147483648LL);
 // 	while (ptr && ptr[i] != '\0')
 // 	{
 // 		printf("LOOPER: %c\n", ptr[i]);

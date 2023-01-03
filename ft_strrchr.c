@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:29:04 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:42:21 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 14:21:29 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*p;
+	int			i;
+	const char	*p;
 
 	i = 0;
 	p = NULL;
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 			p = &s[i];
 		i++;
 	}
-	return (p);
+	return ((char *)p);
 }
 
 // int	main(void)
