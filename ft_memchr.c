@@ -6,12 +6,11 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:13:10 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:37:30 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/04 08:37:41 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
@@ -22,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if ((*(unsigned char *)(s + i)) == c)
+		if ((*(unsigned char *)(s + i)) == (unsigned char)c)
 			return ((void *)(s + i));
 		i++;
 	}

@@ -6,27 +6,26 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:29:04 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/03 14:21:29 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/04 09:11:17 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	const char	*p;
+	int	i;
 
 	i = 0;
-	p = NULL;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			p = &s[i];
+	while (s[i])
 		i++;
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return ((char *)p);
+	return (NULL);
 }
 
 // int	main(void)
@@ -34,6 +33,6 @@ char	*ft_strchr(const char *s, int c)
 // 	char	*str;
 
 // 	str = "Hello there, lVenus";
-// 	printf("%s \n", ft_strchr(&str[0], 'l'));
+// 	printf("%s \n", ft_strrchr(&str[0], 'l'));
 // 	return (0);
 // }

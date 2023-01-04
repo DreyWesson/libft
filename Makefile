@@ -6,7 +6,7 @@
 #    By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/29 15:58:46 by doduwole          #+#    #+#              #
-#    Updated: 2023/01/03 14:52:39 by doduwole         ###   ########.fr        #
+#    Updated: 2023/01/03 17:18:59 by doduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRC =	ft_atoi.c		\
 		ft_putstr_fd.c	\
 		ft_split.c		\
 		ft_strchr.c		\
-		ft_strcmp.c		\
+		ft_strncmp.c		\
 		ft_strdup.c		\
 		ft_striteri.c	\
 		ft_strjoin.c	\
@@ -70,7 +70,7 @@ OBJ = 	ft_atoi.o		\
 		ft_putstr_fd.o	\
 		ft_split.o		\
 		ft_strchr.o		\
-		ft_strcmp.o		\
+		ft_strncmp.o		\
 		ft_strdup.o		\
 		ft_striteri.o	\
 		ft_strjoin.o	\

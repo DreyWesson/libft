@@ -6,11 +6,11 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:22:23 by doduwole          #+#    #+#             */
-/*   Updated: 2022/12/23 08:48:16 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 19:18:52 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_validate(const char *str, int *is_neg, int *is_pos, long *i)
 {

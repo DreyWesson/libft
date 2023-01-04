@@ -6,12 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 16:16:27 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:36:37 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 19:19:09 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

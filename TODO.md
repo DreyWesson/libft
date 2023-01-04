@@ -1,34 +1,34 @@
--   [x] atoi
--   [x] bzero
+-   [ ] atoi
+-   [ ] bzero
 -   [x] calloc
 -   [x] isalnum
 -   [x] isalpha
 -   [x] isascii
 -   [x] isdigit
--   [x] isprint
+-   [ ] isprint
 -   [x] ft_itoa
--   [x] memchr
--   [x] memcmp
+-   [ ] memchr \*
+-   [ ] memcmp \*
 -   [x] memcpy
--   [x] memmove
+-   [ ] memmove
 -   [x] memset
 -   [x] ft_putchar_fd
 -   [x] ft_putendl_fd
 -   [x] ft_putnbr_fd
 -   [x] ft_putstr_fd
--   [x] ft_split
--   [x] strchr
--   [x] strncmp
+-   [ ] ft_split
+-   [ ] strchr
+-   [ ] strncmp
 -   [x] strdup
 -   [x] ft_striteri
--   [x] ft_strjoin
+-   [ ] ft_strjoin
 -   [x] strlcat
--   [x] strlcpy
+-   [ ] strlcpy \*
 -   [x] strlen
--   [x] ft_strmapi
--   [x] strnstr
--   [x] strrchr
+-   [ ] ft_strmapi
+-   [ ] strnstr
+-   [ ] strrchr
 -   [x] ft_strtrim
--   [x] ft_substr
+-   [ ] ft_substr
 -   [x] tolower
 -   [x] toupper

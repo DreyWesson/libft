@@ -6,15 +6,15 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 09:31:37 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:38:21 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 17:21:38 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // https://www.youtube.com/watch?v=PThPm24wGEo
 // #include <stdio.h>
 // #include <string.h>
-#include "libft.h"
 #include <unistd.h>
+#include "libft.h"
 
 // typedef struct
 // {

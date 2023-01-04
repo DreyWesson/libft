@@ -6,47 +6,40 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 22:18:39 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:41:28 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/04 08:27:54 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size);
 
 size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size)
 {
-	unsigned int	i;
-	int				src_len;
+	size_t	i;
 
 	i = 0;
-	src_len = 0;
-	while (src[src_len] != '\0')
+	if (size > 0)
 	{
-		src_len++;
-	}
-	if (size != 0)
-	{
-		size--;
-		while (i < (size))
+		while (src[i] && i < (size - 1))
 		{
 			dest[i] = src[i];
 			i++;
 		}
-		dest[size] = '\0';
+		dest[i] = '\0';
 	}
-	return (src_len);
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }
 
 // int	main(void)
 // {
 // 	char	dest;
-// 	char	*src;
 
-// 	src = "Hello there, Venus";
-// 	printf("%zu \n", ft_strlcpy(&dest, &src[0], 9));
-// 	printf("%s", &dest);
+// 	printf("%zu \n", ft_strlcpy(&dest, "", 15));
+// 	printf("%s\n", &dest);
 // 	return (0);
 // }

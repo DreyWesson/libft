@@ -6,13 +6,12 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 09:13:59 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/03 16:18:31 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/03 19:19:27 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
 char	*ft_handle_zero(char *ptr, int *itr)
 {

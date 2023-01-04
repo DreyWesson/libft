@@ -6,18 +6,17 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 17:05:47 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:35:57 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/04 16:37:44 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	if (s == NULL)
 		return ;
-	while (n-- >= 0)
+	while ((int)n-- >= 0)
 		*(unsigned char *)(s + n) = 0;
 }
 

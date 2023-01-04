@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:13:48 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/03 14:14:22 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/04 09:36:50 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,24 @@
 // 	int age;
 // 	double average;
 // } Student;
-#include <unistd.h>
-
-void	*ft_memmove(void *dst, const void *src, size_t n);
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
+	i = n;
+	if (!dst || !src)
+		return (NULL);
 	if (dst > src)
-		while (--n > 0)
-			(*(unsigned char *)(dst + n)) = (*(unsigned char *)(src + n));
+		while (--i >= 0)
+			(*(char *)(dst + i)) = (*(char *)(src + i));
 	else
 	{
-		while (i < n)
+		i = 0;
+		while (i < (int)n)
 		{
-			(*(unsigned char *)(dst + i)) = (*(unsigned char *)(src + i));
+			(*(char *)(dst + i)) = (*(char *)(src + i));
 			i++;
 		}
 	}
