@@ -6,72 +6,54 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 21:24:23 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:42:40 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/12 08:29:13 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_str_trim(char const *s1, char const *set);
-int		ft_trim_head(char const *s1, char const *set);
-int		ft_trim_tail(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
 
-int	ft_trim_tail(char const *s1, char const *set)
+static int
+	ft_char_in_set(char c, char const *set)
 {
-	int	tail;
-	int	head;
-
-	head = ft_strlen(s1) - 1;
-	tail = 0;
-	while (tail < head)
-	{
-		if ((*(char *)(s1 + tail)) != (*(char *)(set)))
-			break ;
-		tail++;
-	}
-	return (tail);
-}
-
-int	ft_trim_head(char const *s1, char const *set)
-{
-	int	head;
-
-	head = ft_strlen(s1) - 1;
-	while (head > 0)
-	{
-		if ((*(char *)(s1 + head)) != (*(char *)(set)))
-			break ;
-		head--;
-	}
-	return (head);
-}
-
-char	*ft_str_trim(char const *s1, char const *set)
-{
-	int		tail;
-	int		head;
-	char	*ptr;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	tail = ft_trim_tail(s1, set);
-	head = ft_trim_head(s1, set);
-	ptr = malloc(head - tail);
-	if (!ptr)
-		return (NULL);
-	while (tail <= head)
+	while (set[i])
 	{
-		*(ptr + i) = s1[tail];
+		if (set[i] == c)
+			return (1);
 		i++;
-		tail++;
 	}
-	return (ptr);
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	i;
+	size_t	start;
+	size_t	end;
+
+	start = 0;
+	while (s1[start] && ft_char_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_char_in_set(s1[end - 1], set))
+		end--;
+	str = malloc(end - start + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
+		str[i++] = s1[start++];
+	str[i] = 0;
+	return (str);
 }
 // int	main(void)
 // {
-// 	ft_strtrim("   Hello world!    ", " ");
+// 	printf("%s\n",ft_strtrim("   Hello world!    ", " "));
 // 	return (0);
 // }

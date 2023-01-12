@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 19:54:41 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:40:26 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/11 17:02:01 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,28 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
 	int		s1_len;
-	int		s2_len;
-	int		capacity;
+	int		len;
 	int		i;
 
 	i = 0;
 	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	capacity = s1_len + s2_len;
-	ptr = malloc(capacity);
+	len = ft_strlen(s2) + s1_len + 1;
+	ptr = malloc(len);
 	if (!ptr)
 		return (NULL);
 	while (i < s1_len)
 	{
-		*(ptr + i) = s1[i];
+		ptr[i] = s1[i];
 		i++;
 	}
-	while (i < capacity)
+	s1_len = 0;
+	while (s1_len < len)
 	{
-		*(ptr + i) = s2[i - s1_len];
+		ptr[i] = s2[s1_len];
+		s1_len++;
 		i++;
 	}
+	ptr[s1_len] = '\0';
 	return ((char *)(ptr));
 }
 
