@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 17:05:47 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/04 16:37:44 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/13 08:54:33 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,16 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	size_t	i;
+
 	if (s == NULL)
 		return ;
-	while ((int)n-- >= 0)
-		*(unsigned char *)(s + n) = 0;
+	i = 0;
+	while (i < n)
+	{
+		*(unsigned char *)(s + i) = 0;
+		i++;
+	}
 }
 
 // int	main(void)

@@ -6,88 +6,53 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 09:13:59 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/03 19:19:27 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/15 11:36:12 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_handle_zero(char *ptr, int *itr)
+int	ft_nbrlen(int n)
 {
-	ptr[*itr] = '0';
-	*itr = *itr + 1;
-	ptr[*itr] = '\0';
-	return (ptr);
-}
+	int	i;
 
-int	ft_is_neg(int *n)
-{
-	int		is_negative;
-
-	is_negative = 0;
-	if (*n < 0)
-		is_negative = 1;
-	return (is_negative);
-}
-
-void	ft_str_converter(char *ptr, int *n, int *itr)
-{
-	int	rem;
-
-	rem = 0;
-	while (*n != 0)
+	i = 0;
+	if (n <= 0)
+		i = 1;
+	while (n)
 	{
-		rem = *n % 10;
-		*n = *n / 10;
-		if (rem < 0)
-			rem = -rem;
-		if (rem > 9)
-			ptr[*itr] = (rem - 10) + 'a';
-		else
-			ptr[*itr] = rem + '0';
-		*itr = *itr + 1;
+		n /= 10;
+		++i;
 	}
-}
-
-char	*ft_reverse_str(char *ptr, int itr)
-{
-	char	tmp;
-	int		tail;
-
-	tail = 0;
-	itr--;
-	while (tail < itr)
-	{
-		tmp = ptr[itr];
-		ptr[itr] = ptr[tail];
-		ptr[tail] = tmp;
-		itr--;
-		tail++;
-	}
-	return (ptr);
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		itr;
-	int		is_negative;
+	int		len;
 
-	ptr = malloc(256);
+	len = ft_nbrlen(n);
+	ptr = ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
-	itr = 0;
-	is_negative = ft_is_neg(&n);
 	if (n == 0)
-		return (ft_handle_zero(ptr, &itr));
-	if (is_negative)
+		ptr[0] = '0';
+	if (n < 0)
+	{
+		ptr[0] = '-';
+		if (n == -2147483648)
+		{
+			ptr[--len] = '8';
+			n /= 10;
+		}
 		n = -n;
-	ft_str_converter(ptr, &n, &itr);
-	if (is_negative)
-		ptr[itr++] = '-';
-	ptr[itr] = '\0';
-	ft_reverse_str(ptr, itr);
+	}
+	while (len-- && n != 0)
+	{
+		ptr[len] = (n % 10) + '0';
+		n /= 10;
+	}
 	return (ptr);
 }
 

@@ -6,7 +6,7 @@
 #    By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/29 15:58:46 by doduwole          #+#    #+#              #
-#    Updated: 2023/01/11 11:30:13 by doduwole         ###   ########.fr        #
+#    Updated: 2023/01/13 13:31:36 by doduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,7 +94,7 @@ $(NAME): $(OBJ)
 	@$(ECHO) "✅" $@
 
 %.o: %.c
-	@clang -Wall -Wextra -Werror -I $(HEAD) -o $@ -c $<
+	@gcc -Wall -Wextra -Werror -I $(HEAD) -o $@ -c $<
 	@$(ECHO) "✅" $@
 
 clean:

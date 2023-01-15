@@ -6,44 +6,38 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 19:54:41 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/11 17:02:01 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/13 10:01:23 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
 #include "libft.h"
-
-char	*ft_strjoin(char const *s1, char const *s2);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
-	int		s1_len;
-	int		len;
-	int		i;
+	size_t	i;
+	size_t	j;
 
-	i = 0;
-	s1_len = ft_strlen(s1);
-	len = ft_strlen(s2) + s1_len + 1;
-	ptr = malloc(len);
+	ptr = malloc((ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!ptr)
 		return (NULL);
-	while (i < s1_len)
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		ptr[i] = s1[i];
+		ptr[j] = s1[i];
+		j++;
 		i++;
 	}
-	s1_len = 0;
-	while (s1_len < len)
+	i = 0;
+	while (s2[i])
 	{
-		ptr[i] = s2[s1_len];
-		s1_len++;
+		ptr[j] = s2[i];
+		j++;
 		i++;
 	}
-	ptr[s1_len] = '\0';
-	return ((char *)(ptr));
+	ptr[j] = 0;
+	return (ptr);
 }
 
 // int main(void)

@@ -6,16 +6,16 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 16:35:33 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/03 17:08:06 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/13 09:09:19 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-char	ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-		return (c - 32);
+		c -= 32;
 	return (c);
 }
 

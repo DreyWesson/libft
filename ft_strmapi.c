@@ -6,13 +6,10 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 15:10:43 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/11 12:07:54 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/13 12:12:23 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

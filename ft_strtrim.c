@@ -6,11 +6,10 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 21:24:23 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/12 08:29:13 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/13 12:12:29 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set);
