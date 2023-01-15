@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 19:43:26 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 16:57:14 by doduwole         ###   ########.fr       */
+/*   Created: 2023/01/15 19:03:21 by doduwole          #+#    #+#             */
+/*   Updated: 2023/01/15 19:44:07 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+t_list	*ft_lstnew(void *content)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
-}
+	t_list	*head;
 
-// int	main(void)
+	head = (t_list *)malloc(sizeof(t_list));
+	head->content = content;
+	head->next = NULL;
+	return (head);
+}
+// int main(void)
 // {
-// 	printf("%i", ft_isalnum('5'));
+// 	int	ptr;
+
+// 	ptr = 45;
+// 	ft_lstnew(&ptr);
 // 	return (0);
 // }

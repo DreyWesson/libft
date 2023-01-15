@@ -6,7 +6,7 @@
 #    By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/29 15:58:46 by doduwole          #+#    #+#              #
-#    Updated: 2023/01/13 13:31:36 by doduwole         ###   ########.fr        #
+#    Updated: 2023/01/15 19:50:25 by doduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRC =	ft_atoi.c		\
 		ft_tolower.c	\
 		ft_toupper.c
 
+BONUS_SRC = t_list.c
 
 HEAD = ./
 
@@ -83,7 +84,10 @@ OBJ = 	ft_atoi.o		\
 		ft_strtrim.o	\
 		ft_substr.o		\
 		ft_tolower.o	\
-		ft_toupper.o
+		ft_toupper.o	\
+		t_list.o
+
+BONUS_OBJ = t_list.o
 
 ECHO = echo
 
@@ -106,3 +110,8 @@ fclean: clean
 	@/bin/rm -f $(NAME)
 
 re: fclean all
+
+bonus:	$(BONUS_OBJS)
+		ar rcs $(NAME) $(BONUS_OBJS)
+
+# .PHONY:	all clean fclean re bonus

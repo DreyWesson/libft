@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:29:04 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/04 09:11:17 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/15 18:49:48 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
-		i++;
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
@@ -27,7 +25,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
 // int	main(void)
 // {
 // 	char	*str;

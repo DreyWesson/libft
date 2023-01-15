@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 11:27:22 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 12:59:50 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/15 16:00:28 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ char	**ft_split(char const	*s, char c)
 	}
 	return (arr);
 }
-
-
 // int	main(void)
 // {
 // 	char	**ptr;
