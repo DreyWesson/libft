@@ -6,13 +6,11 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:13:48 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 15:58:53 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:36:10 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // https://www.geeksforgeeks.org/write-memcpy/
-// #include <stdio.h>
-// #include <string.h>
 // typedef struct
 // {
 // 	char name[256];

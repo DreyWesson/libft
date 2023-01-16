@@ -6,11 +6,10 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 10:27:28 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:15:25 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:37:56 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

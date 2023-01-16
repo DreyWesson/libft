@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:22:23 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/11 10:14:25 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:20:01 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,31 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	is_neg;
-	int	res;
+	long	i;
+	long	nbr;
+	int		is_neg;
 
-	if (!str)
-		return (0);
 	i = 0;
-	res = 0;
-	is_neg = 1;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	nbr = 0;
+	is_neg = 0;
+	while (str[i] != '\0' && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
 		i++;
-	if (str[i] == '-')
-		is_neg = -1;
-	if (is_neg == -1 || str[i] == '+')
+	if (str[i] != '\0' && str[i] == '-')
+	{
+		is_neg = 1;
 		i++;
-	while (str[i] >= '0' && str[i] <= '9')
-		res = (res * 10) + (str[i++] - '0');
-	return (res * is_neg);
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
+	{
+		nbr = (nbr * 10) + (str[i] - '0');
+		i++;
+	}
+	if (is_neg == 1)
+		return (-nbr);
+	return (nbr);
 }
 
 // int	main(int argc, char *argv[])

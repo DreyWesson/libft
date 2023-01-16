@@ -6,12 +6,10 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 12:17:26 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/02 12:40:16 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:37:21 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
