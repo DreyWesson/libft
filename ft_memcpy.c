@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 09:31:37 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 16:54:28 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 15:48:10 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if (dst == NULL)
+	if (!dst && !src)
 		return (NULL);
 	while (n-- > 0)
 		(*(unsigned char *)(dst + n)) = (*(unsigned char *)(src + n));
@@ -31,6 +31,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 // int	main(void)
 // {
+// 	ft_memcpy(((void *)0), ((void *)0), 3);
 // 	return (0);
 // }
 	// ****** memcpy with string test *******
