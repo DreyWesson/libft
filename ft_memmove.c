@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:13:48 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/04 09:36:50 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 15:58:53 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	int	i;
 
 	i = n;
-	if (!dst || !src)
+	if (!dst && !src)
 		return (NULL);
 	if (dst > src)
 		while (--i >= 0)
@@ -45,10 +45,12 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 // int	main(void)
 // {
-// 	char src[] = "Copy that gsghuuwu";
-// 	char dst [100];
-// 	ft_memmove(dst,src,4);
-// 	printf("two: %p\t%p\t%li\n", dst,src, dst-src);
+// 	// char src[] = "Copy that gsghuuwu";
+// 	// char dst [100];
+// 	// ft_memmove(dst,src,4);
+// 	// printf("two: %p\t%p\t%li\n", dst,src, dst-src);
+// 	        char b[0xF0];
+//         ft_memmove(((void *)0), b, 5);
 // 	return (0);
 // }
 	// ****** memcpy with string test *******
