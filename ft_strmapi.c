@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 15:10:43 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/13 12:12:23 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:03:53 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	ptr = malloc(ft_strlen(s) + 1);
+	if (!ptr)
+		return (NULL);
 	while (s[i])
 	{
 		ptr[i] = (*f)(i, s[i]);

@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 08:14:21 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/13 09:15:46 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/16 16:08:36 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!haystack || !needle)
-		return (NULL);
-	if (!needle || !needle[0])
+	if (!needle[0])
 		return ((char *)haystack);
 	i = 0;
 	while (haystack[i] && i < len)
