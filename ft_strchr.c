@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:14:45 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/04 08:58:36 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:56:43 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-
 // int	main(void)
 // {
 // 	char	*str;

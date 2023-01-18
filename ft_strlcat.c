@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 07:32:59 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/13 13:37:35 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:56:24 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i + j] = '\0';
 	return (i + k);
 }
-
 // int	main(void)
 // {
 // 	char	*s;

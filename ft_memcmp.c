@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:17:55 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 17:00:16 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:57:29 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
 // int	main(void)
 // {
 // 	// int arr1[5] = {9,2,3,4,5};

@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:29:42 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 12:39:15 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:57:43 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
 // int	main(void)
 // {
 // 	t_list	*head;

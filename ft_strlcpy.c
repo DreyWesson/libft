@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 22:18:39 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 16:37:32 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:56:15 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
 // int	main(void)
 // {
 // 	char	dest;

@@ -6,15 +6,11 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:39:50 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/18 12:18:45 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:59:47 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// Iterates the list ’lst’
-// applies the function ’f’ on the content of each node.
-// Creates a new list from the return value of function ’f’. 
-// The ’del’ function is used to delete the content of a node if needed.
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -37,3 +33,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (result);
 }
+// void	del(void *ptr)
+// {
+// 	printf("DEL-CALLED %p\n", &ptr);
+// 	return ;
+// }
+
+// void	f(void *ptr)
+// {
+// 	printf("F-CALLED %p\n", &ptr);
+// 	return ;
+// }
+
+// int	main(void)
+// {
+// 	int	ptr;
+
+// 	ptr = 42;
+// 	ft_lstdelone(ft_lstnew(&ptr), f);
+// 	return (0);
+// }

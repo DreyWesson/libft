@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 19:54:41 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/13 10:01:23 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:56:33 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[j] = 0;
 	return (ptr);
 }
-
 // int main(void)
 // {
 // 	printf("%s\n", ft_strjoin("Drey","Oduwole"));

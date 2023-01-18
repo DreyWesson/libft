@@ -6,11 +6,11 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 14:38:42 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/03 19:18:22 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:58:34 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint( int c )
 {

@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:13:48 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 17:36:10 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:57:10 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
 // int	main(void)
 // {
 // 	// char src[] = "Copy that gsghuuwu";

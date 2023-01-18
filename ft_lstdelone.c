@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:35:45 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/17 15:48:05 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:28:43 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	(*del)(lst->content);
 	free(lst);
 }
+// void	del(void *ptr)
+// {
+// 	printf("HERE %p\n", &ptr);
+// 	return ;
+// }
+
 // int	main(void)
 // {
-// 	t_list	*head;
-// 	int 	ptr = 45;
-// 	int		ptr2 = 42;
+// 	int	ptr;
 
-// 	head = ft_lstnew(&ptr);
-// 	ft_lstadd_back(&head, ft_lstnew(&ptr2));
-// 	printf("%i, %i\n", *(int*)head->content, *(int*)head->next->content);
-// 	free(head->next);
-// 	free(head);
+// 	ptr = 42;
+// 	ft_lstdelone(ft_lstnew(&ptr), del);
 // 	return (0);
 // }

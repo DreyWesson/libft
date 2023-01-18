@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 12:47:02 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/17 12:55:57 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:52:20 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = tmp;
 	}
 }
+// void	del(void *ptr)
+// {
+// 	printf("HERE %p\n", &ptr);
+// 	return ;
+// }
+
+// int	main(void)
+// {
+// 	int	ptr;
+
+// 	ptr = 42;
+// 	ft_lstclear((t_list **)ft_lstnew(&ptr), del);
+// 	return (0);
+// }

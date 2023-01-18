@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:47:49 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 16:41:20 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:57:00 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	*ft_memset(void *s, int n, size_t len)
 	}
 	return (s);
 }
-
 // int	main(void)
 // {
 // 	// int arr[2] = {1,2};

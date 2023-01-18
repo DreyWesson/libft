@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:50:30 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 09:56:47 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 15:56:06 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 	return (0);
 }
-
-// #include <stdio.h>
-
 // int	main(void)
 // {
 // 	const char	*str;
