@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 18:31:39 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 20:07:03 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:23:21 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	ft_putendl_fd(char *s, int fd);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-size_t	ft_strlen(const char *str);
 char	*ft_itoa(int n);
 char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
@@ -61,6 +61,9 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 15:35:45 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/17 15:48:05 by doduwole         ###   ########.fr       */
+/*   Created: 2023/01/17 15:48:40 by doduwole          #+#    #+#             */
+/*   Updated: 2023/01/17 17:08:25 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst)
 		return ;
-	(*del)(lst->content);
-	free(lst);
+	while (lst)
+	{
+		(*f)(lst->content);
+		lst = lst->next;
+	}
 }
-// int	main(void)
-// {
-// 	t_list	*head;
-// 	int 	ptr = 45;
-// 	int		ptr2 = 42;
-
-// 	head = ft_lstnew(&ptr);
-// 	ft_lstadd_back(&head, ft_lstnew(&ptr2));
-// 	printf("%i, %i\n", *(int*)head->content, *(int*)head->next->content);
-// 	free(head->next);
-// 	free(head);
-// 	return (0);
-// }

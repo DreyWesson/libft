@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 15:10:43 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 16:03:53 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/18 12:22:58 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-	// char	*ptr;
-	// size_t	i;
-
-	// ptr = ft_strdup(s);
-	// if (!ptr)
-	// 	return (NULL);
-	// i = 0;
-	// while (ptr[i])
-	// {
-	// 	ptr[i] = (*f)(i, ptr[i]);
-	// 	i++;
-	// }
-	// return (ptr);
-
 // char	f(unsigned int i, char c)
 // {
 // 	printf("%c\t%i\n", c, i);
