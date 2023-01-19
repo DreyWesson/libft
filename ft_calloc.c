@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 19:40:47 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 10:21:26 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:06:37 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count * size > 2147483647)
+		return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (NULL);

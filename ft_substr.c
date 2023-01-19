@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 06:08:41 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/16 16:26:35 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:08:31 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
-	size_t	end;
-	size_t	i;
+	char	*str;
 
 	if (!s)
-		return (NULL);
-	if (!len || start >= (ft_strlen(s)))
-		return (ft_strdup(""));
-	ptr = (char *)ft_calloc(sizeof(char), (len + 1));
-	if (!ptr)
-		return (NULL);
-	end = start + len;
-	i = 0;
-	while (start < end)
-	{
-		ptr[i] = s[start];
-		start++;
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+		return (0);
+	if (ft_strlen(s) <= start)
+		len = 0;
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s + start);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (0);
+	ft_memmove(str, s + start, len);
+	return (str);
 }
 
 // int	main(void)
