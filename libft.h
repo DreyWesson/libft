@@ -6,7 +6,7 @@
 /*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 18:31:39 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/18 12:39:10 by doduwole         ###   ########.fr       */
+/*   Updated: 2023/01/25 12:13:12 by doduwole         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct s_list{
 	void			*content;
