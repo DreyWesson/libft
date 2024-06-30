@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: doduwole <doduwole@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: drey <drey@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 16:16:27 by doduwole          #+#    #+#             */
-/*   Updated: 2023/01/15 16:57:28 by doduwole         ###   ########.fr       */
+/*   Created: 2023/12/23 15:37:26 by drey              #+#    #+#             */
+/*   Updated: 2023/12/23 15:37:27 by drey             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef B_HPP
+# define B_HPP
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
+# include "Base.hpp"
 
-// int	main(void)
-// {
-// 	printf("%i", ft_isalpha('a'));
-// 	return (0);
-// }
+class B : public Base {};
+
+#endif

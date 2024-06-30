@@ -1,0 +1,23 @@
+# services:
+#   app:
+#     build:
+#       dockerfile: Dockerfile
+#     image: app
+#     stdin_open: true
+#     tty: true
+#     volumes:
+#       - type: bind
+#         source: .
+#         target: /app
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    image: app
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: .
+        target: /app

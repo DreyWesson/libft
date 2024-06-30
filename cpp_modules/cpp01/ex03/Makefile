@@ -1,0 +1,62 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: doduwole <doduwole@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/14 21:04:30 by doduwole          #+#    #+#              #
+#    Updated: 2023/11/17 21:07:39 by doduwole         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = violence
+
+
+# FLAGS
+CC = c++
+CFLAGS = -Werror -Wall -Wextra -std=c++98
+
+
+# Del
+RM = rm -rf
+
+
+# DIRECTORIES
+SRC =	$(wildcard *.cpp **/*.cpp **/*/*.cpp)
+OBJ_DIR = obj
+SRC_DIR = src
+INC_DIR = inc
+OBJS = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
+
+
+# COLOURS
+NONE='\033[0m'
+GREEN='\033[32m'
+GRAY='\033[2;37m'
+CURSIVE='\033[3m'
+WARNING='\033[33m'
+DANGER='\033[31m'
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@$(CC) $(OBJS) $(CFLAGS) -o $@ 
+	@echo $(GREEN)"- Compiled -"$(NONE)
+
+$(OBJ_DIR)/%.o: %.cpp 
+	@echo $(CURSIVE) "     - Building $<" $(NONE)
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	@$(RM) $(OBJS) $(OBJ_DIR) > /dev/null || true
+	@echo $(CURSIVE)$(GRAY) "     - Object files removed" $(NONE)
+
+fclean: clean
+	@rm -f $(NAME) > /dev/null || true
+	@echo $(CURSIVE)$(GRAY) "     - $(NAME) removed" $(NONE)
+
+re: fclean all
+
+.PHONY: all clean fclean re
