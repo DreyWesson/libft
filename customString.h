@@ -21,4 +21,8 @@ void *_memcpy(void *restrict dst, const void *restrict src, size_t n);
 int _atoi(const char *str);
 char	*_substr(char const *s, unsigned int start, size_t len);
 char *_strjoin(char const *s1, char const *s2);
+char *_strtrim(char const *s1, char const *set);
+char **_split(char const *s, char c);
+char *_itoa(int n);
+
 #endif
