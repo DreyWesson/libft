@@ -25,35 +25,6 @@ void forEach_(struct String s, void (*func)(char)) {
     }
 }
 
-// char *slice_(struct String s, size_t start, size_t end) {
-//     size_t len = s.strlen_(s);
-//     if (!end)
-//         end = len;
-    
-//     if (len <= 0 || start >= end || start > len || end > len)
-//         return NULL;
-//     char *str;
-
-//     str = (char *) malloc(sizeof(char) * (end - start + 1));
-//     if (!str)
-//         return NULL;
- 
-
-//     size_t i = 0;
-
-//     while (start < end)
-//     {
-//         str[i] = s.str[start];
-//         i++;
-//         start++;
-//     }
-
-//     str[i] = '\0';
-//     printf("%s\n", str);
-//     return str;
-// }
-
-
 char *slice_(struct String s, size_t start, ...) {
     size_t len = s.strlen_(s);
     size_t end;
@@ -63,9 +34,8 @@ char *slice_(struct String s, size_t start, ...) {
 
     end = va_arg(args, size_t);
     end = (end > len)? len : end;
-    printf("%zu", end);
     va_end(args);
-    if (start >= end || start > len || end > len)
+    if (start >= end || start > len)
         return NULL;
 
     size_t slice_len = end - start;
@@ -77,6 +47,7 @@ char *slice_(struct String s, size_t start, ...) {
         str[i] = s.str[start + i];
     }
     str[slice_len] = '\0';
+    printf("%s\n", str);
     return str;
 }
 
