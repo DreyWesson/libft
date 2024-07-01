@@ -8,7 +8,8 @@ void printChar(char c) {
 int main() {
     String myString = newString("Apple, Banana, Kiwi");
     
-    char * ptr = myString.slice_(myString, 7, 13);
+    char * ptr = myString.slice_(myString, 7);
+    (void)ptr;
     // printf("%s\n", ptr);
     // // myString.charAt_(myString, 0);
     // // myString.strlen_(myString);

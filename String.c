@@ -56,21 +56,14 @@ void forEach_(struct String s, void (*func)(char)) {
 
 char *slice_(struct String s, size_t start, ...) {
     size_t len = s.strlen_(s);
-    size_t end = len;
+    size_t end;
+
     va_list args;
     va_start(args, start);
 
-    // if (va_arg(args, int) != 0) {
-    // end = va_arg(args, size_t);
-    // printf("-> %zu\n", end);
-    // }
-    for (int i = 0; i < start; ++i) {
-        int value = va_arg(args, int);
-        printf("%d ", value);
-    }
-
-    
-
+    end = va_arg(args, size_t);
+    end = (end > len)? len : end;
+    printf("%zu", end);
     va_end(args);
     if (start >= end || start > len || end > len)
         return NULL;
