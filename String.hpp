@@ -21,10 +21,10 @@ public:
     String& operator=(const String &cpy);
 
 
-    void set_str(std::string);
-    std::string get_str() const;
-    size_t strlen_(std::string);
-
+    void set_str(std::string s);
+    const std::string get_str() const;
+    size_t strlen_() const;
+    char charAt(size_t index) const;
 };
 
 #endif

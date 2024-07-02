@@ -13,7 +13,6 @@ typedef struct String {
     char (*charAt_)(struct String *, size_t);
     size_t (*strlen_)(struct String *);
     void (*forEach_)(struct String *, void (*func)(char));
-    // char *(*slice_)(struct String, size_t, size_t);
     struct String (*slice_)(struct String*, size_t, ...);
 } String;
 

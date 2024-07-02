@@ -1,7 +1,9 @@
 #include "String.hpp"
 
 int main(void) {
-    std::string s = "Apple, Banana, Kiwi";
-    String str(s);
+    String s;
+    s.set_str("Apple, Banana, Kiwi");
+    cout << s.strlen_() << endl;
+    cout << s.charAt(7) << endl;
     return (0);
 }
