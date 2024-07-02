@@ -52,6 +52,28 @@ struct String slice_(struct String *s, size_t start, ...) {
     return ss;
 }
 
+struct String strrev_(struct String *s) {
+    if (!s || !s->str)
+        return (*s);
+    size_t len = s->strlen_(s);
+
+    char *str = (char *) malloc(sizeof(char) * (len + 1));
+    size_t head = len - 1;
+    size_t tail = 0;
+    while (tail <= head)
+    {
+        str[tail] = s->str[head];
+        str[head] = s->str[tail];
+        tail++;
+        head--;
+    }
+    str[len] = '\0';
+    s->str = str;
+    return *s;
+}
+
+
+
 String newString(char *initialStr) {
     String s;
     s.str = initialStr;
@@ -59,5 +81,6 @@ String newString(char *initialStr) {
     s.strlen_ = strlen_;
     s.forEach_ = forEach_;
     s.slice_ = slice_;
+    s.strrev_ = strrev_;
     return s;
 }

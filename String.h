@@ -10,16 +10,20 @@
 
 typedef struct String {
     char *str;
-    char (*charAt_)(struct String *, size_t);
+    struct String (*strrev_)(struct String *);
     size_t (*strlen_)(struct String *);
+    char (*charAt_)(struct String *, size_t);
     void (*forEach_)(struct String *, void (*func)(char));
     struct String (*slice_)(struct String*, size_t, ...);
+
 } String;
 
 char charAt_(struct String *s, size_t index);
 size_t strlen_(struct String *s);
 void forEach_(struct String *s, void (*func)(char));
 struct String slice_(struct String *s, size_t start, ...);
+struct String strrev_(struct String *s);
+
 String newString(char *initialStr);
 
 #endif

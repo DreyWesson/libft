@@ -7,3 +7,8 @@ int main(void) {
     cout << s.charAt(7) << endl;
     return (0);
 }
+
+
+
+
+
