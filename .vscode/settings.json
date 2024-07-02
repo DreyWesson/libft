@@ -61,6 +61,7 @@
     "__config": "cpp",
     "__verbose_abort": "cpp",
     "cstdio": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "ostream": "cpp"
   }
 }
