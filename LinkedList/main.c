@@ -14,7 +14,7 @@ int main(void) {
     }
     if (list)
         printf("List is not empty\n");
-    prependNode(list, (void *)0);
+    // prependNode(list, (void *)1);
     printList(list);
     (void) list;
     // printf("%d\n", *(int *)list->head->data);

@@ -60,8 +60,7 @@ LinkedList *prependNode(LinkedList *list, void *data)
     Node *new_node = create_node(data);
     if (!new_node)
         return NULL;
-
-    new_node->next = list->head;
+    // new_node->next = list->head;
     list->head = new_node;
     return (list);
 }
