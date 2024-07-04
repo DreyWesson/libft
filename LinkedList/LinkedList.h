@@ -1,17 +1,21 @@
-#ifndef LINKEDLIST_H
-# define LINKEDLIST_H
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-typedef struct Node {
-    void * data;
+typedef struct Node
+{
+    void *data;
     struct Node *next;
 } Node;
 
-typedef struct LinkedList {
+typedef struct LinkedList
+{
     Node *head;
+    Node *tail;
+    size_t size;
 } LinkedList;
 
 // Create LinkedList
@@ -20,13 +24,28 @@ LinkedList *create_list();
 Node *create_node(void *data);
 // Append and prepend ton list
 LinkedList *appendNode(LinkedList *head, void *data);
+LinkedList *appendNodeTr(LinkedList *head, void *data);
 LinkedList *prependNode(LinkedList *list, void *data);
-void printList(LinkedList *list);
 // PrintList
-// Reverse List
-// Insert to list
-// delete one from list
+void printList(LinkedList *list);
 // Clear list
+void clearList(LinkedList *list);
+// Reverse List
+LinkedList *reverse(LinkedList *list);
+// Insert to list
+LinkedList *insert(LinkedList *list, void *data, size_t pos);
+// delete one from list
+LinkedList *delete_list(LinkedList *list, size_t pos);
 // CREATE A STACK and QUEUE
+
+// merge two halves
+LinkedList *merge_list(LinkedList *list1, LinkedList *list2);
+// Split list into halves
+LinkedList *sort_list(LinkedList *list, int (*cmp)(const void *, const void *));
+// sort list
+LinkedList *bubblesort_list(LinkedList *list1);
+
+Node *merge(Node* left, Node* right, int (*cmp)(const void *, const void *));
+int compare_int(const void *a, const void *b);
 
 #endif

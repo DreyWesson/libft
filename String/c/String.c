@@ -28,7 +28,7 @@ void forEach_(struct String *s, void (*func)(char)) {
 struct String slice_(struct String *s, size_t start, ...) {
     size_t len = s->strlen_(s);
     size_t end;
-    struct String ss = newString("");
+    struct String ss = stringConstructor("");
 
     va_list args;
     va_start(args, start);
@@ -90,7 +90,7 @@ char *strcpy_(struct String *self, char *dest, const char *src) {
 
 
 
-String newString(char *initialStr) {
+String stringConstructor(char *initialStr) {
     String s;
     s.str = initialStr;
     s.charAt_ = charAt_;

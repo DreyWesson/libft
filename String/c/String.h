@@ -26,6 +26,6 @@ struct String slice_(struct String *s, size_t start, ...);
 struct String strrev_(struct String *s);
 char *strcpy_(struct String *self, char *dest, const char *src);
 
-String newString(char *initialStr);
+String stringConstructor(char *initialStr);
 
 #endif

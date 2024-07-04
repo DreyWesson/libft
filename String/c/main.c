@@ -6,7 +6,7 @@ void printChar(char c) {
 }
 
 int main() {
-    String myString = newString("Apple, Banana, Kiwi");
+    String myString = stringConstructor("Apple, Banana, Kiwi");
 
     printf("%c\n", myString.charAt_(&myString, 7));
     printf("%zu\n", myString.strlen_(&myString));
@@ -20,7 +20,7 @@ int main() {
 
     char dest;
     char *src = "Hello World";
-    String test = newString("");
+    String test = stringConstructor("");
     printf("%s\n", test.strcpy_(&test, &dest, src));
     free(sliced.str);
     free(reversed.str);
