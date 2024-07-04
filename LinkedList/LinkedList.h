@@ -40,12 +40,11 @@ LinkedList *delete_list(LinkedList *list, size_t pos);
 
 // merge two halves
 LinkedList *merge_list(LinkedList *list1, LinkedList *list2);
+LinkedList *merge(LinkedList *list1, LinkedList *list2);
+LinkedList *mergeSort(LinkedList *list);
 // Split list into halves
-LinkedList *sort_list(LinkedList *list, int (*cmp)(const void *, const void *));
 // sort list
 LinkedList *bubblesort_list(LinkedList *list1);
 
-Node *merge(Node* left, Node* right, int (*cmp)(const void *, const void *));
-int compare_int(const void *a, const void *b);
 
 #endif
