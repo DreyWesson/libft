@@ -17,17 +17,16 @@ LinkedList *create_list()
     if (!new_list)
         return NULL;
 
-    new_list->head = NULL;
-    new_list->tail = new_list->head;
+    new_list->head = new_list->tail = NULL;
     new_list->size = 0;
 
     return new_list;
 }
 
-
 LinkedList *appendNode(LinkedList *list, void *data)
 {
-    if (!list) {
+    if (!list)
+    {
         list = create_list();
         if (!list)
             return NULL;
@@ -50,7 +49,8 @@ LinkedList *appendNode(LinkedList *list, void *data)
 
 LinkedList *appendNodeTr(LinkedList *list, void *data)
 {
-    if (!list) {
+    if (!list)
+    {
         list = create_list();
         if (!list)
             return NULL;
@@ -67,7 +67,7 @@ LinkedList *appendNodeTr(LinkedList *list, void *data)
     else
     {
         Node *tmp = list->head;
-        while ( tmp && tmp->next != NULL)
+        while (tmp && tmp->next != NULL)
         {
             tmp = tmp->next;
         }
@@ -81,8 +81,10 @@ LinkedList *appendNodeTr(LinkedList *list, void *data)
     return (list);
 }
 
-LinkedList *prependNode(LinkedList *list, void *data) {
-    if (!list) {
+LinkedList *prependNode(LinkedList *list, void *data)
+{
+    if (!list)
+    {
         list = create_list();
         if (!list)
             return NULL;
@@ -99,9 +101,10 @@ LinkedList *prependNode(LinkedList *list, void *data) {
     return list;
 }
 
-void clearList(LinkedList *list) {
+void clearList(LinkedList *list)
+{
     if (!list || !list->head)
-        return ;
+        return;
     Node *tmp = list->head;
     Node *cache;
     while (tmp)
@@ -110,82 +113,99 @@ void clearList(LinkedList *list) {
         free(tmp);
         tmp = cache;
     }
+
+    list->head = list->tail = NULL;
+    list->size = 0;
 }
 
-LinkedList *insert(LinkedList *list, void *data, size_t pos) {
-    if (!list) {
-        if (pos == 0) {
+LinkedList *insert(LinkedList *list, void *data, size_t pos)
+{
+    if (!list)
+    {
+        if (pos == 0)
+        {
             list = create_list();
             if (!list)
                 return NULL;
             return appendNode(list, data);
-        } else {
+        }
+        else
+        {
             return NULL;
         }
     }
     if (pos >= list->size)
         return appendNode(list, data);
-    
+
     if (pos == 0)
         return prependNode(list, data);
 
     size_t pointer = 0;
     Node *tmp = list->head;
+    Node *new_node = create_node(data);
+    Node *rest_node = tmp->next;
+
     while (pointer < (pos - 1) && tmp != NULL)
     {
         tmp = tmp->next;
         pointer++;
     }
-    Node *new_node = create_node(data);
     if (!new_node)
         return NULL;
-    Node *rest_node = tmp->next;
+
     tmp->next = new_node;
     new_node->next = rest_node;
     list->size += 1;
+
     return list;
 }
 
-LinkedList *delete_list(LinkedList *list, size_t pos) {
+LinkedList *delete_list(LinkedList *list, size_t pos)
+{
     if (!list || !list->head)
-            return NULL;
+        return NULL;
 
     if (pos >= list->size)
         return list;
 
     Node *to_delete;
-    if (pos == 0) {
+    if (pos == 0)
+    {
 
         to_delete = list->head;
         list->head = list->head->next;
         if (list->size == 1)
             list->tail = NULL;
         free(to_delete);
-    } else {
+    }
+    else
+    {
         size_t pointer = 0;
         Node *itr = list->head;
+
         while (pointer < (pos - 1) && itr->next != NULL)
         {
             itr = itr->next;
             pointer++;
         }
- 
+
         to_delete = itr->next;
         itr->next = itr->next->next;
-        printf("%p   %p\n", to_delete, list->tail);
+
         if (to_delete == list->tail)
             list->tail = itr;
+
         free(to_delete);
     }
-
 
     list->size--;
     return list;
 }
 
-void printList(LinkedList *list) {
+void printList(LinkedList *list)
+{
     if (!list)
-        return ;
+        return;
     Node *tmp = list->head;
     while (tmp)
     {
@@ -194,17 +214,16 @@ void printList(LinkedList *list) {
     }
 }
 
-LinkedList *reverse(LinkedList *list) {
+LinkedList *reverse(LinkedList *list)
+{
     Node *prev = NULL;
     Node *current = list->head;
     Node *next = NULL;
 
-    while (current) {
-        // untangle the nodes
+    while (current)
+    {
         next = current->next;
         current->next = prev;
-
-        // init for next cycle 
         prev = current;
         current = next;
     }
@@ -212,11 +231,14 @@ LinkedList *reverse(LinkedList *list) {
     return list;
 }
 
-LinkedList *merge_list(LinkedList *list1, LinkedList *list2) {
-    if (!list1 || !list1->head) {
+LinkedList *merge_list(LinkedList *list1, LinkedList *list2)
+{
+    if (!list1 || !list1->head)
+    {
         return list2;
     }
-    if (!list2 || !list2->head) {
+    if (!list2 || !list2->head)
+    {
         return list1;
     }
 
@@ -227,6 +249,3 @@ LinkedList *merge_list(LinkedList *list1, LinkedList *list2) {
     free(list2);
     return list1;
 }
-
-
-

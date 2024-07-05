@@ -9,10 +9,18 @@ typedef struct myArray
     size_t size;
 } myArray;
 
+myArray arrConstructor(int *arr, size_t size)
+{
+    myArray data;
+    data.arr = arr;
+    data.size = size;
+    return data;
+}
+
 myArray *merge(myArray *arr1, myArray *arr2)
 {
 
-    myArray *newArr = ( myArray *)calloc(1, sizeof(myArray));
+    myArray *newArr = (myArray *)calloc(1, sizeof(myArray));
     if (!newArr)
         return (printf("Failed to alloc mem\n"), NULL);
     size_t left = 0, right = 0, primary = 0;
@@ -22,23 +30,41 @@ myArray *merge(myArray *arr1, myArray *arr2)
         return (printf("Failed to alloc mem\n"), NULL);
 
     while (left < arr1->size && right < arr2->size)
-        newArr->arr[primary++] = (arr1->arr[left] < arr2->arr[right])
-                                     ? arr1->arr[left++] : arr2->arr[right++];
+    {
+        size_t isLeftLesser = (arr1->arr[left] < arr2->arr[right]);
 
+        newArr->arr[primary++] = isLeftLesser ? arr1->arr[left++] : arr2->arr[right++];
+    }
     while (left < arr1->size)
         newArr->arr[primary++] = arr1->arr[left++];
     while (right < arr2->size)
         newArr->arr[primary++] = arr2->arr[right++];
     newArr->size = primary;
+
     return newArr;
 }
 
-myArray arrConstructor(int *arr, size_t size)
+int memoryAllocations(myArray **leftContainer, myArray **rightContainer, size_t mid, size_t total_size)
 {
-    myArray data;
-    data.arr = arr;
-    data.size = size;
-    return data;
+    char *failedMsg = "Mem alloc failed!\n";
+    *leftContainer = (myArray *)calloc(1, sizeof(myArray));
+    if (!*leftContainer)
+        return (printf(failedMsg), 0);
+
+    *rightContainer = (myArray *)calloc(1, sizeof(myArray));
+    if (!*rightContainer)
+        return (printf(failedMsg), 0);
+
+
+    (*leftContainer)->arr = (int *)calloc(sizeof(int), mid);
+    if (!(*leftContainer)->arr)
+        return (printf(failedMsg), 0);
+
+    (*rightContainer)->arr = (int *)calloc(sizeof(int), total_size - mid);
+    if (!(*rightContainer)->arr)
+        return (printf(failedMsg), 0);
+
+    return (1);
 }
 
 myArray *divideArr(myArray *arr)
@@ -47,27 +73,18 @@ myArray *divideArr(myArray *arr)
         return arr;
 
     size_t mid = arr->size / 2;
+    myArray *leftContainer = NULL;
+    myArray *rightContainer = NULL;
 
-    myArray *leftContainer = (myArray *)calloc(1, sizeof(myArray));
-    if (!leftContainer)
-        return (printf("Mem alloc failed!\n"), NULL);
-    myArray *rightContainer = (myArray *)calloc(1, sizeof(myArray));
-    if (!rightContainer)
-        return (printf("Mem alloc failed!\n"), NULL);
-
-    leftContainer->arr = (int *)calloc(sizeof(int), mid);
-    if (!leftContainer->arr)
-        return (printf("Mem alloc failed!\n"), NULL);
-    rightContainer->arr = (int *)calloc(sizeof(int), arr->size - mid);
-    if (!rightContainer->arr)
-        return (printf("Mem alloc failed!\n"), NULL);
+    if (!memoryAllocations(&leftContainer, &rightContainer, mid, arr->size))
+        return NULL;
 
     leftContainer->size = mid;
     rightContainer->size = arr->size - mid;
 
     for (size_t i = 0; i < mid; i++)
         leftContainer->arr[i] = arr->arr[i];
-    
+
     for (size_t i = mid; i < arr->size; i++)
         rightContainer->arr[i - mid] = arr->arr[i];
 
@@ -103,6 +120,8 @@ int main(int argc, char **argv)
     if (!merged)
         return (printf("Unexpected value!\n"), 1);
     myArray *sorted = divideArr(merged);
+    if (!sorted)
+        return (1);
     size_t i = 0;
     while (i < sorted->size)
     {

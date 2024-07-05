@@ -62,6 +62,7 @@
     "__verbose_abort": "cpp",
     "cstdio": "cpp",
     "new": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "list": "c"
   }
 }
