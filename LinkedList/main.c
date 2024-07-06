@@ -1,6 +1,7 @@
 #include "LinkedList.h"
 
-int main(void) {
+int main(void)
+{
     // int arr[] = {34, 87, 94, 21, 42, 63, 105, 84};
     // int arr2[] = {8, 7, 6, 2, 10};
     // LinkedList *list = create_list();
@@ -22,37 +23,34 @@ int main(void) {
     // LinkedList *sorted = mergeSort(merged);
 
     // printList(sorted);
-    // if (list && list->head)
-    //     clearList(list);
-    // if (list2 && list2->head)
-    //     clearList(list2);
-    // if (merged && merged->head)
-    //     clearList(merged);
-    // if (sorted && sorted->head)
-    //     clearList(sorted);
+    // destroyList(list);
+    // destroyList(list2);
+    // destroyList(merged);
+    // destroyList(sorted);
 
-    // free(list);
-    // free(list2);
-    // free(merged);
-    // free(sorted);
-    int arr[] = {34, 87, 94, 21, 42, 63, 105, 84};
-    size_t capacity = sizeof(arr)/ sizeof(int);
-    Stack *st = createStack(capacity);
-    size_t i = 0;
+    //
+    // STACK
+    //
+    // int arr[] = {34, 87, 94, 21, 42, 63, 105, 84};
+    // size_t capacity = sizeof(arr)/ sizeof(int);
+    // Stack *st = createStack(capacity);
+    // size_t i = 0;
 
-    while (i < capacity) {
-        push_stack(st, (void *)&arr[i]);
-        i++;
-    }
-    // printList(st->list);
-    // i = 0;
-    // while (i < capacity - 2)
-    // {
-    //     pop_stack(st);
-    //     printf("\n\n");
+    // while (i < capacity) {
+    //     push_stack(st, (void *)&arr[i]);
     //     i++;
     // }
-    peek_stack(st);
-    (void)st;
+    // printList(st->list);
+    // printf("==%d==\n", *(int *)(peek_stack(st)));
+    // // i = 0;
+    // // while (i < capacity - 2)
+    // // {
+    // //     pop_stack(st);
+    // //     i++;
+    // // }
+    // destroy_stack(st);
+    printf("%s\n", isMatchingParenthesis("{(097876})}[]") ? "balanced"
+                                                         : "not balanced");
+
     return 0;
 }

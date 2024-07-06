@@ -32,6 +32,7 @@ LinkedList *appendNodeTr(LinkedList *head, void *data);
 LinkedList *prependNode(LinkedList *list, void *data);
 void printList(LinkedList *list);
 void clearList(LinkedList *list);
+void destroyList(LinkedList *list);
 LinkedList *reverse(LinkedList *list);
 LinkedList *insert(LinkedList *list, void *data, size_t pos);
 LinkedList *delete_list(LinkedList *list, size_t pos);
@@ -42,6 +43,9 @@ int safeInit(LinkedList **list);
 Stack *push_stack(Stack *st, void *data);
 Stack *pop_stack(Stack *st);
 void *peek_stack(Stack *st);
+void clear_stack(Stack *st);
+void destroy_stack(Stack *st);
+int isMatchingParenthesis(char *str);
 
 Stack *createStack(size_t capacity);
 

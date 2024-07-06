@@ -83,6 +83,7 @@ LinkedList *appendNodeTr(LinkedList *list, void *data)
 
     return (list);
 }
+
 LinkedList *prependNode(LinkedList *list, void *data) {
     if (!list) return NULL;
 
@@ -128,6 +129,16 @@ void clearList(LinkedList *list)
 
     list->head = list->tail = NULL;
     list->size = 0;
+}
+
+void destroyList(LinkedList *list)
+{
+    if (!list) return;
+
+    if (list->head)
+        clearList(list);
+
+    free(list);
 }
 
 LinkedList *insert(LinkedList *list, void *data, size_t pos)

@@ -49,20 +49,20 @@ int memoryAllocations(myArray **leftContainer, myArray **rightContainer, size_t 
     char *failedMsg = "Mem alloc failed!\n";
     *leftContainer = (myArray *)calloc(1, sizeof(myArray));
     if (!*leftContainer)
-        return (printf(failedMsg), 0);
+        return (printf("%s", failedMsg), 0);
 
     *rightContainer = (myArray *)calloc(1, sizeof(myArray));
     if (!*rightContainer)
-        return (printf(failedMsg), 0);
+        return (printf("%s", failedMsg), 0);
 
 
     (*leftContainer)->arr = (int *)calloc(sizeof(int), mid);
     if (!(*leftContainer)->arr)
-        return (printf(failedMsg), 0);
+        return (printf("%s", failedMsg), 0);
 
     (*rightContainer)->arr = (int *)calloc(sizeof(int), total_size - mid);
     if (!(*rightContainer)->arr)
-        return (printf(failedMsg), 0);
+        return (printf("%s", failedMsg), 0);
 
     return (1);
 }
